@@ -1,0 +1,14 @@
+
+var typingTimer;                //timer identifier
+var doneTypingInterval = 2000;  //time in ms (5 seconds)
+
+//onchange or onkeyup call autoSave()
+Foo.prototype.autoSave = function() {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(doneTyping, doneTypingInterval);
+};
+
+//call save function
+function doneTyping () {
+       $("#btnAutoSave").click()
+}
